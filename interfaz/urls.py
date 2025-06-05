@@ -5,4 +5,5 @@ from appi import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),  # Ruta para la página principal
+    path('registrar/', views.registrar_cliente, name='registrarCliente'),
 ]
