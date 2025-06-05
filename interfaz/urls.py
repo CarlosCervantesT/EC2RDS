@@ -1,9 +1,8 @@
+# interfaz/urls.py
 from django.contrib import admin
-from django.urls import path
-from appi import views 
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),  # Ruta para la página principal
-    path('registrar/', views.registrarCliente, name='registrar_cliente')  # Nombre de la vista corregido
+    path('', include('appi.urls')),  # Importa TODAS las rutas de appi
 ]

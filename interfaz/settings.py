@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-temporal-para-
 #  DEBUG y ALLOWED_HOSTS
 # ------------------------------
 # DEBUG debe estar en False en producción. Si la variable no existe, se asume False.
-DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() in ("true", "1", "yes")
+DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in ("true", "1", "yes")
 
 # Puedes configurar directamente la IP del servidor si no usas variables de entorno
 ALLOWED_HOSTS = ["3.19.56.170"]
