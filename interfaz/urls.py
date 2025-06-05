@@ -4,5 +4,5 @@ from appi import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),  # Ruta para la página principal
+    path('', views.home, name='home'),  # Ruta para la página principal
 ]
