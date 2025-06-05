@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a nuestro Punto de Ventas USAC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #37474f;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #455a64;
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            background-color: #2196f3;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenidos a nuestro Punto de Ventas USAC</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Facturas</a></li>
+            <li><a href="{% url 'registrar_cliente' %}">Registrar Cliente</a></li>
+            <li><a href="{% url 'editar_cliente' %}">Editar Cliente</a></li>
+            <li><a href="{% url 'eliminar_cliente' %}">Eliminar Cliente</a></li>
+            <li><a href="{% url 'listar_clientes' %}">Listar Clientes</a></li>
+            
+        </ul>
+    </nav>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="saludo" id="saludo">
+        <button type="submit">Saludar</button>
+    </form>
+    {% if SALUDO is not None %}
+    <p>{{SALUDO}}</p>
+{% endif %}
+</body>
+</html>
+
+
+
