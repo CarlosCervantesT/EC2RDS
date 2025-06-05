@@ -7,21 +7,21 @@ urlpatterns = [
 
     # CRUD Clientes
     path('registrar_cliente/', views.registrarCliente, name='registrar_cliente'),
-    path('editar_cliente/', views.editarCliente, name='editar_cliente'),
-    path('eliminar_cliente/', views.eliminarCliente, name='eliminar_cliente'),
-    path('listar_clientes/', views.listarClientes, name='listar_clientes'),
+    path('editar_cliente/', views.editar_cliente, name='editar_cliente'),
+    path('eliminar_cliente/', views.eliminar_cliente, name='eliminar_cliente'),
+    path('listar_clientes/', views.listar_clientes, name='listar_clientes'),
 
     # CRUD Productos
-    path('registrar_producto/', views.registrarProducto, name='registrar_producto'),
-    path('editar_producto/', views.editarProducto, name='editar_producto'),
-    path('eliminar_producto/', views.eliminarProducto, name='eliminar_producto'),
-    path('listar_productos/', views.listarProductos, name='listar_productos'),
+    path('registrar_producto/', views.registrar_producto, name='registrar_producto'),
+    path('editar_producto/', views.editar_producto, name='editar_producto'),
+    path('eliminar_producto/', views.eliminar_producto, name='eliminar_producto'),
+    path('listar_productos/', views.listar_productos, name='listar_productos'),
 
     # CRUD Facturas
-    path('registrar_factura/', views.registrarFactura, name='registrar_factura'),
-    path('editar_factura/', views.editarFactura, name='editar_factura'),
-    path('eliminar_factura/', views.eliminarFactura, name='eliminar_factura'),
-    path('listar_facturas/', views.listarFacturas, name='listar_facturas'),
+    path('registrar_factura/', views.registrar_factura, name='registrar_factura'),
+    path('editar_factura/', views.editar_factura, name='editar_factura'),
+    path('eliminar_factura/', views.eliminar_factura, name='eliminar_factura'),
+    path('listar_facturas/', views.listar_facturas, name='listar_facturas'),
 
     # Reportes
     path('productos_mas_vendidos/', views.mas_vendidos, name='productos_mas_vendidos'),
