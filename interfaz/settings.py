@@ -47,7 +47,7 @@ ROOT_URLCONF = "interfaz.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],  # Puedes añadir si tienes templates globales
+        "DIRS": [BASE_DIR / "appi" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
